@@ -1,0 +1,1 @@
+simple password generator build with Tailwind CSS and pure JavaScript
