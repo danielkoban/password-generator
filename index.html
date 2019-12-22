@@ -9,14 +9,52 @@
     <title>Password Generator</title>
 </head>
 
-<body>
-    <main class="h-screen flex flex-col md:flex-row">
+<body class="h-screen bg-gray-300">
+    <main class="h-full flex flex-col md:flex-row">
         <header class="md:h-screen md:w-1/2 flex justify-center items-center bg-indigo-800 shadow-md z-50">
             <h1 class="py-5 font-bold text-xl md:text-4xl xl:text-5xl text-white text-center md:text-left">Generate
                 your
                 <br>unique
                 password</h1>
         </header>
+        <section class="h-full md:h-screen md:w-1/2 flex justify-center items-center">
+            <div class="m-auto w-11/12 md:w-9/12 p-8 bg-red-100 shadow-md">
+                <div class="result-container mb-5 flex justify-between">
+                    <span class="w-full bg-white" id="result"></span>
+                    <button class="btn px-4 py-3 bg-gray-700 hover:bg-gray-800 text-white focus:outline-none"
+                        id="clipboard" value="Copy">
+                        Copy
+                    </button>
+                </div>
+                <div class="settings">
+                    <div class="setting mt-12 mb-3">
+                        <label>Password length</label>
+                        <input type="number" id="length" min='4' max='20' value='20' />
+                    </div>
+                    <div class="setting mb-3 flex items-center">
+                        <label>Include uppercase letters</label>
+                        <input class="order-first mr-3" type="checkbox" id="uppercase" checked />
+                    </div>
+                    <div class="setting mb-3 flex items-center">
+                        <label>Include lowercase letters</label>
+                        <input class="order-first mr-3" type="checkbox" id="lowercase" checked />
+                    </div>
+                    <div class="setting mb-3 flex items-center">
+                        <label>Include numbers</label>
+                        <input class="order-first mr-3" type="checkbox" id="numbers" checked />
+                    </div>
+                    <div class="setting mb-12 flex items-center">
+                        <label>Include symbols</label>
+                        <input class="order-first mr-3" type="checkbox" id="symbols" checked />
+                    </div>
+                </div>
+                <button
+                    class="btn btn-large block m-auto px-8 py-3 bg-red-600 hover:bg-green-600 rounded-full text-white focus:outline-none"
+                    id="generate">
+                    Generate
+                </button>
+            </div>
+        </section>
     </main>
 </body>
 
